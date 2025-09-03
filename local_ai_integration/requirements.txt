@@ -1,0 +1,19 @@
+# ZombieCoder Local AI Integration Requirements
+# ===========================================
+
+# Core dependencies
+flask>=2.3.0
+flask-cors>=4.0.0
+requests>=2.31.0
+
+# System monitoring
+psutil>=5.9.0
+
+# Optional: For enhanced features
+# cryptography>=41.0.0  # For SSL/TLS support
+# pyOpenSSL>=23.0.0    # For HTTPS support
+
+# Development dependencies (optional)
+# pytest>=7.4.0        # For testing
+# black>=23.0.0        # For code formatting
+# flake8>=6.0.0        # For linting

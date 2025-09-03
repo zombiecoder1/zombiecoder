@@ -1,0 +1,122 @@
+{
+  "cursor": {
+    "ai": {
+      "provider": "custom",
+      "endpoint": "http://localhost:8080/proxy/chat",
+      "apiKey": "local-zombiecoder-agent",
+      "model": "zombiecoder-local",
+      "forceLocal": true,
+      "disableCloud": true
+    },
+    "completion": {
+      "provider": "custom",
+      "endpoint": "http://localhost:8080/proxy/completion",
+      "apiKey": "local-zombiecoder-agent",
+      "model": "zombiecoder-local",
+      "forceLocal": true,
+      "disableCloud": true
+    },
+    "settings": {
+      "localAI": {
+        "enabled": true,
+        "server": "http://localhost:8080",
+        "agent": "ZombieCoder Agent (সাহন ভাই)",
+        "capabilities": [
+          "coding",
+          "debugging",
+          "architecture",
+          "database",
+          "api",
+          "security",
+          "performance",
+          "devops",
+          "voice",
+          "real_time"
+        ],
+        "personality": [
+          "elder_brother",
+          "friend",
+          "teacher",
+          "doctor",
+          "engineer",
+          "guard",
+          "coach",
+          "professional"
+        ],
+        "autoDetect": true,
+        "contextAware": true,
+        "truthVerification": true,
+        "realTimeSupport": true,
+        "cloudFallback": false
+      },
+      "proxy": {
+        "enabled": true,
+        "interceptEndpoints": [
+          "api.openai.com",
+          "api.anthropic.com",
+          "api.together.xyz",
+          "api-inference.huggingface.co"
+        ],
+        "redirectToLocal": true,
+        "transparent": true
+      },
+      "ui": {
+        "showLocalStatus": true,
+        "showAgentInfo": true,
+        "showCapability": true,
+        "showLatency": true,
+        "blinkIndicator": true,
+        "statusBar": true
+      },
+      "shortcuts": {
+        "switchAgent": "ctrl+shift+a",
+        "showStatus": "ctrl+shift+s",
+        "realTimeInfo": "ctrl+shift+r",
+        "truthCheck": "ctrl+shift+t",
+        "securityCheck": "ctrl+shift+sec",
+        "performanceCheck": "ctrl+shift+perf",
+        "databaseCheck": "ctrl+shift+db",
+        "apiCheck": "ctrl+shift+api",
+        "devOpsCheck": "ctrl+shift+dev",
+        "voiceCommand": "ctrl+shift+v"
+      }
+    }
+  },
+  "proxy": {
+    "server": {
+      "host": "localhost",
+      "port": 8080,
+      "protocol": "http"
+    },
+    "interception": {
+      "enabled": true,
+      "endpoints": [
+        "api.openai.com",
+        "api.anthropic.com",
+        "api.together.xyz",
+        "api-inference.huggingface.co"
+      ],
+      "methods": ["POST", "GET"],
+      "transparent": true
+    },
+    "localAgent": {
+      "name": "ZombieCoder Agent (সাহন ভাই)",
+      "description": "আমি আপনার সব কাজের সহায়ক - কোডিং, ডিবাগিং, আর্কিটেকচার, সিকিউরিটি, পারফরম্যান্স সবই জানি",
+      "language": "bengali_english_mixed",
+      "capabilities": 10,
+      "personalities": 8,
+      "autoDetect": true,
+      "contextAware": true,
+      "truthVerification": true,
+      "realTimeSupport": true
+    },
+    "response": {
+      "format": "cursor_compatible",
+      "includeMetadata": true,
+      "includeLatency": true,
+      "includeAgentInfo": true,
+      "includeCapability": true,
+      "includeSource": true
+    }
+  }
+}

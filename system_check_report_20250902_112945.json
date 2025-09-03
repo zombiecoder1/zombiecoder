@@ -1,0 +1,104 @@
+{
+  "timestamp": "2025-09-02T11:29:42.244424",
+  "system_info": {
+    "platform": "win32",
+    "python_version": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+    "memory_total_gb": 15.87,
+    "memory_available_gb": 9.34,
+    "memory_percent": 41.1,
+    "cpu_percent": 0.0,
+    "disk_free_gb": 407.01,
+    "disk_percent": 14.6
+  },
+  "services": {
+    "openai_shim": {
+      "status": "healthy",
+      "response_time": 0.00449,
+      "status_code": 200
+    },
+    "zombiecoder": {
+      "status": "offline",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=12345): Max retries exceeded with url: /status (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F3BA80CCD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "ollama": {
+      "status": "healthy",
+      "response_time": 0.004558,
+      "status_code": 200
+    },
+    "overall": {
+      "healthy_count": 2,
+      "total_count": 3,
+      "health_percentage": 66.7
+    }
+  },
+  "cloud_blocking": {
+    "total_domains": 6,
+    "blocked_domains": 0,
+    "blocking_percentage": 0.0,
+    "domains": {
+      "api.openai.com": {
+        "status": "accessible",
+        "ip": "unknown"
+      },
+      "api.anthropic.com": {
+        "status": "accessible",
+        "ip": "unknown"
+      },
+      "oai.hf.space": {
+        "status": "accessible",
+        "ip": "unknown"
+      },
+      "openaiapi-site.azureedge.net": {
+        "status": "accessible",
+        "ip": "unknown"
+      },
+      "openrouter.ai": {
+        "status": "accessible",
+        "ip": "unknown"
+      },
+      "api.openrouter.ai": {
+        "status": "accessible",
+        "ip": "unknown"
+      }
+    },
+    "status": "vulnerable"
+  },
+  "memory_usage": {
+    "ollama": {
+      "processes": [
+        {
+          "pid": 9816,
+          "memory_mb": 28.79
+        },
+        {
+          "pid": 11364,
+          "memory_mb": 27.2
+        }
+      ],
+      "total_memory_mb": 55.99,
+      "process_count": 2,
+      "status": "normal"
+    }
+  },
+  "performance": {
+    "check_duration": 3.43,
+    "timestamp_end": "2025-09-02T11:29:45.674456"
+  },
+  "recommendations": [],
+  "configuration": {
+    "files": {
+      ".env": "exists",
+      ".vscode/settings.json": "exists",
+      ".cursor/settings.json": "exists",
+      ".cursorrules": "exists"
+    },
+    "environment": {
+      "OPENAI_API_BASE": "set",
+      "OPENAI_API_KEY": "set",
+      "FORCE_LOCAL_AI": "unset",
+      "AI_PROVIDER": "unset",
+      "AI_MODEL": "unset"
+    }
+  },
+  "overall_status": "NEEDS_ATTENTION"
+}

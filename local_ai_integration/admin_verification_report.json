@@ -1,0 +1,362 @@
+{
+  "timestamp": "2025-09-02T04:15:25.983889",
+  "verdict": "POTENTIALLY_FAKE",
+  "confidence": 0.06,
+  "checks": {
+    "local_ports": {
+      "8001": {
+        "status": "inactive",
+        "accessible": false,
+        "error": "timed out"
+      },
+      "12345": {
+        "status": "inactive",
+        "accessible": false,
+        "error": "timed out"
+      },
+      "11434": {
+        "status": "active",
+        "accessible": true,
+        "response_time": "fast"
+      },
+      "8080": {
+        "status": "inactive",
+        "accessible": false,
+        "error": "timed out"
+      },
+      "8081": {
+        "status": "inactive",
+        "accessible": false,
+        "error": "timed out"
+      }
+    },
+    "cloud_connectivity": {
+      "api.openai.com": {
+        "reachable": false,
+        "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+      },
+      "api.anthropic.com": {
+        "reachable": false,
+        "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+      },
+      "oai.hf.space": {
+        "reachable": false,
+        "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+      },
+      "openaiapi-site.azureedge.net": {
+        "reachable": false,
+        "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+      }
+    },
+    "hosts_file": {
+      "file_exists": true,
+      "cloud_domains_blocked": 0,
+      "total_cloud_domains": 4,
+      "configuration": "not_blocked"
+    },
+    "cursor_processes": [
+      {
+        "pid": 1972,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 2996,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 3288,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 3832,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 3916,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": [
+          {
+            "local_address": "192.168.1.218:62366",
+            "remote_address": "104.18.18.125:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62357",
+            "remote_address": "50.16.193.198:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:60851",
+            "remote_address": "104.18.19.125:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:59922",
+            "remote_address": "52.21.47.125:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62593",
+            "remote_address": "35.174.189.166:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:58770",
+            "remote_address": "13.216.115.5:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:60339",
+            "remote_address": "34.224.201.12:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62628",
+            "remote_address": "54.147.57.235:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62741",
+            "remote_address": "52.6.24.110:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:60285",
+            "remote_address": "52.72.232.83:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          }
+        ]
+      },
+      {
+        "pid": 3928,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 5560,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": [
+          {
+            "local_address": "192.168.1.218:62084",
+            "remote_address": "104.18.19.125:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:58313",
+            "remote_address": "3.210.133.103:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62085",
+            "remote_address": "44.217.12.0:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:58310",
+            "remote_address": "34.203.139.173:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          }
+        ]
+      },
+      {
+        "pid": 6132,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": [
+          {
+            "local_address": "192.168.1.218:62457",
+            "remote_address": "3.216.39.243:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:58324",
+            "remote_address": "44.219.138.89:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62485",
+            "remote_address": "3.217.50.18:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62474",
+            "remote_address": "104.18.18.125:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:60052",
+            "remote_address": "54.209.82.73:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:58908",
+            "remote_address": "34.203.7.149:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:58398",
+            "remote_address": "34.193.242.118:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:60852",
+            "remote_address": "104.18.19.125:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          }
+        ]
+      },
+      {
+        "pid": 6668,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 7716,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 9584,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 9948,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 9976,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 10036,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 10520,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 10928,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": [
+          {
+            "local_address": "192.168.1.218:62708",
+            "remote_address": "52.6.24.110:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62273",
+            "remote_address": "107.23.211.213:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62742",
+            "remote_address": "3.217.50.18:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62249",
+            "remote_address": "104.18.18.125:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62179",
+            "remote_address": "18.214.76.32:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          },
+          {
+            "local_address": "192.168.1.218:62207",
+            "remote_address": "18.214.76.32:443",
+            "status": "ESTABLISHED",
+            "type": "TCP"
+          }
+        ]
+      },
+      {
+        "pid": 11068,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 12616,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      },
+      {
+        "pid": 13000,
+        "name": "Cursor.exe",
+        "exe": "C:\\Users\\sahon\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "connections": []
+      }
+    ],
+    "network_connections": {
+      "total_connections": 119,
+      "local_connections": 7,
+      "external_connections": 31,
+      "suspicious_connections": []
+    },
+    "agent_status": {
+      "total_agents": 0,
+      "active_agents": [],
+      "memory_timestamp": "unknown"
+    }
+  },
+  "recommendations": [
+    "❌ System may be making cloud calls",
+    "🔒 Configure hosts file to block all cloud AI domains",
+    "🚀 Start OpenAI Shim server on port 8001"
+  ]
+}

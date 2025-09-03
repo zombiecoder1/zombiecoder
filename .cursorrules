@@ -1,0 +1,14 @@
+# Cursor AI Local Configuration
+# This file configures Cursor to use local AI
+
+# Force local AI usage
+FORCE_LOCAL_AI=true
+LOCAL_AI_ENDPOINT=http://127.0.0.1:8001/v1
+LOCAL_AI_KEY=local-ai-key
+AI_PROVIDER=zombiecoder
+AI_MODEL=local-llama
+EDITOR_MODE=local_ai
+
+# AI Model Configuration
+AI_MODEL=local-llama
+AI_PROVIDER=zombiecoder

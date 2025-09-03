@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-08-24T23:50:03.057500",
+  "local_models": {
+    "llama3.2:1b": {
+      "status": "optimized",
+      "size": "updated",
+      "performance": "improved"
+    },
+    "qwen2.5-coder:1.5b-base": {
+      "status": "optimized",
+      "size": "updated",
+      "performance": "improved"
+    },
+    "codellama:latest": {
+      "status": "optimized",
+      "size": "updated",
+      "performance": "improved"
+    },
+    "llama3.1:8b": {
+      "status": "optimized",
+      "size": "updated",
+      "performance": "improved"
+    }
+  },
+  "functions": {
+    "Advanced Agent System": {
+      "status": "active",
+      "response_time": 2.049786
+    },
+    "Proxy Server": {
+      "status": "active",
+      "response_time": 2.044763
+    },
+    "Multi-Project API": {
+      "status": "active",
+      "response_time": 2.207598
+    }
+  },
+  "editor_connections": {
+    "vscode_extension": {
+      "status": "available",
+      "path": "D:\\Alhamdullha\\shaon-extension\\shaon-zombiecoder-extension-1.0.0.vsix"
+    },
+    "cursor_integration": {
+      "status": "not_configured"
+    }
+  },
+  "directory_structure": {
+    "docs": {
+      "status": "organized",
+      "files_moved": 1
+    },
+    "tests": {
+      "status": "organized",
+      "files_moved": 0
+    },
+    "tools": {
+      "status": "organized",
+      "files_moved": 1
+    },
+    "config": {
+      "status": "organized",
+      "files_moved": 1
+    },
+    "backup": {
+      "status": "organized",
+      "files_moved": 0
+    },
+    "logs": {
+      "status": "organized",
+      "files_moved": 0
+    }
+  },
+  "system_health": {
+    "ollama_running": true,
+    "python_version": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "base_directory": "D:\\Alhamdullha",
+    "core_components": {
+      "core-server/advanced_agent_system.py": "present",
+      "our-server/ai_providers.py": "present",
+      "shaon-extension/package.json": "present",
+      "optimized_port_routing.py": "present"
+    }
+  }
+}

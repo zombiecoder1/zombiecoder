@@ -1,0 +1,68 @@
+{
+  "memory": {
+    "botgachh_path": "data/botgachh",
+    "session_log": "session_log.json",
+    "task_history": "task_history.json",
+    "max_memory_mb": 100,
+    "cleanup_interval_hours": 24
+  },
+  "server": {
+    "port": 12345,
+    "host": "0.0.0.0",
+    "debug": false
+  },
+  "agents": {
+    "default_agent": "ZombieCoder Agent (সাহন ভাই)",
+    "capabilities": [
+      "coding",
+      "debugging",
+      "architecture",
+      "database",
+      "api",
+      "security",
+      "performance",
+      "devops",
+      "voice",
+      "real_time"
+    ],
+    "personalities": [
+      "elder_brother",
+      "friend",
+      "teacher",
+      "doctor",
+      "engineer",
+      "guard",
+      "coach",
+      "professional"
+    ]
+  },
+  "proxy": {
+    "port": 8080,
+    "host": "0.0.0.0",
+    "intercept_endpoints": [
+      "api.openai.com",
+      "api.anthropic.com",
+      "api.together.xyz",
+      "api-inference.huggingface.co"
+    ]
+  },
+  "multi_project": {
+    "port": 8081,
+    "host": "0.0.0.0",
+    "config_file": "data/multi_project_config.json"
+  },
+  "ollama": {
+    "url": "http://localhost:11434",
+    "timeout": 30,
+    "models": ["llama3.2:1b", "qwen2.5-coder:1.5b-base", "codellama:latest"]
+  },
+  "cloud_fallback": {
+    "enabled": true,
+    "providers": ["openrouter", "together", "huggingface"],
+    "api_keys": {
+      "openrouter": "",
+      "together": "",
+      "huggingface": ""
+    }
+  }
+}

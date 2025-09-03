@@ -1,0 +1,131 @@
+{
+  "name": "shaon-zombiecoder-extension",
+  "version": "1.0.0",
+  "description": "Shaon - ZombieCoder AI Extension for Editor Integration with Copilot Support",
+  "publisher": "zombiecoder",
+  "main": "dist/extension.js",
+  "scripts": {
+    "build": "tsc",
+    "build:extension": "tsc && vsce package",
+    "compile:extension": "tsc",
+    "watch:extension": "tsc --watch",
+    "dev": "next dev",
+    "build:webview": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Snippets",
+    "Extension Packs"
+  ],
+  "activationEvents": [
+    "onCommand:shaon.startChat",
+    "onCommand:shaon.openPanel",
+    "onCommand:shaon.voiceChat",
+    "onCommand:shaon.switchAgent",
+    "onCommand:shaon.analyzeCode",
+    "onCommand:shaon.copilotChat"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "shaon.startChat",
+        "title": "Shaon: Start Chat",
+        "category": "Shaon AI"
+      },
+      {
+        "command": "shaon.openPanel",
+        "title": "Shaon: Open AI Panel",
+        "category": "Shaon AI"
+      },
+      {
+        "command": "shaon.voiceChat",
+        "title": "Shaon: Voice Chat",
+        "category": "Shaon AI"
+      },
+      {
+        "command": "shaon.switchAgent",
+        "title": "Shaon: Switch Agent",
+        "category": "Shaon AI"
+      },
+      {
+        "command": "shaon.analyzeCode",
+        "title": "Shaon: Analyze Code",
+        "category": "Shaon AI"
+      },
+      {
+        "command": "shaon.copilotChat",
+        "title": "Shaon: Copilot Chat",
+        "category": "Shaon AI"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "shaon.copilotChat",
+        "key": "ctrl+shift+p",
+        "when": "editorTextFocus"
+      }
+    ],
+    "statusBar": {
+      "items": [
+        {
+          "id": "shaon.status",
+          "name": "Shaon AI Status",
+          "alignment": "left",
+          "priority": 100
+        }
+      ]
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "shaon.copilotChat",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-scroll-area": "^1.0.5",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.294.0",
+    "next": "14.0.3",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^6",
+    "@typescript-eslint/parser": "^6",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
