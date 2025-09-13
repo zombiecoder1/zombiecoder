@@ -1,0 +1,29 @@
+# Programming Agent Configuration
+name: programming
+version: 1.0
+created: 2025-09-13T12:15:40.620842
+
+# Memory Settings
+memory:
+  database: memory.db
+  cache_size: 100MB
+  isolation_level: strict
+  backup_frequency: daily
+
+# Access Control
+access_control:
+  read_only: false
+  cross_agent_access: false
+  admin_override: false
+
+# Performance Settings
+performance:
+  max_memory_usage: 512MB
+  cleanup_interval: 3600
+  log_level: info
+
+# Security Settings
+security:
+  encryption: true
+  access_logging: true
+  audit_trail: true
