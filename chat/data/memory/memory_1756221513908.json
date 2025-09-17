@@ -1,0 +1,84 @@
+{
+  "users": [
+    [
+      "user_1756221311963_gqqiuchwy",
+      {
+        "id": "user_1756221311963_gqqiuchwy",
+        "preferences": {
+          "language": "bengali",
+          "theme": "system",
+          "autoSpeak": true
+        },
+        "createdAt": "2025-08-26T15:15:17.032Z",
+        "lastActivity": 1756221317032,
+        "sessions": [
+          "mesotuiy8tfmeoylah"
+        ]
+      }
+    ],
+    [
+      "testuser",
+      {
+        "id": "testuser",
+        "preferences": {
+          "language": "bengali"
+        },
+        "createdAt": "2025-08-26T15:15:28.215Z",
+        "lastActivity": 1756221328215,
+        "sessions": [
+          "mesou5hqwf8t1ffa60m"
+        ]
+      }
+    ]
+  ],
+  "sessions": [
+    [
+      "mesotuiy8tfmeoylah",
+      {
+        "id": "mesotuiy8tfmeoylah",
+        "userId": "user_1756221311963_gqqiuchwy",
+        "createdAt": "2025-08-26T15:15:19.114Z",
+        "lastActivity": 1756221319114,
+        "conversationId": "mesotuiyvpwq632bmh"
+      }
+    ],
+    [
+      "mesou5hqwf8t1ffa60m",
+      {
+        "id": "mesou5hqwf8t1ffa60m",
+        "userId": "testuser",
+        "createdAt": "2025-08-26T15:15:33.326Z",
+        "lastActivity": 1756221333326,
+        "conversationId": "mesou5hqdyhhry6sph"
+      }
+    ]
+  ],
+  "conversations": [
+    [
+      "mesotuiyvpwq632bmh",
+      {
+        "id": "mesotuiyvpwq632bmh",
+        "sessionId": "mesotuiy8tfmeoylah",
+        "userId": "user_1756221311963_gqqiuchwy",
+        "messages": [],
+        "createdAt": "2025-08-26T15:15:19.114Z",
+        "lastUpdated": 1756221319114,
+        "summary": null
+      }
+    ],
+    [
+      "mesou5hqdyhhry6sph",
+      {
+        "id": "mesou5hqdyhhry6sph",
+        "sessionId": "mesou5hqwf8t1ffa60m",
+        "userId": "testuser",
+        "messages": [],
+        "createdAt": "2025-08-26T15:15:33.326Z",
+        "lastUpdated": 1756221333326,
+        "summary": null
+      }
+    ]
+  ],
+  "globalContext": [],
+  "timestamp": "2025-08-26T15:18:33.908Z"
+}

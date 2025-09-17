@@ -1,0 +1,10 @@
+{
+  "openai.apiBase": "http://127.0.0.1:8001/v1",
+  "openai.apiKey": "local-ai-key",
+  "openai.forceLocal": true,
+  "zombiecoder.endpoint": "http://127.0.0.1:8001/v1",
+  "zombiecoder.apiKey": "local-ai-key",
+  "zombiecoder.provider": "local",
+  "zombiecoder.model": "local-llama",
+  "zombiecoder.forceLocal": true
+}

@@ -1,0 +1,107 @@
+{
+  "users": [
+    [
+      "user_1756221311963_gqqiuchwy",
+      {
+        "id": "user_1756221311963_gqqiuchwy",
+        "preferences": {
+          "language": "bengali",
+          "theme": "system",
+          "autoSpeak": true
+        },
+        "createdAt": "2025-08-26T15:15:17.032Z",
+        "lastActivity": 1756223014498,
+        "sessions": [
+          "mesotuiy8tfmeoylah",
+          "mespu8lb6l788mkaivm"
+        ]
+      }
+    ],
+    [
+      "testuser",
+      {
+        "id": "testuser",
+        "preferences": {
+          "language": "bengali"
+        },
+        "createdAt": "2025-08-26T15:15:28.215Z",
+        "lastActivity": 1756221328215,
+        "sessions": [
+          "mesou5hqwf8t1ffa60m"
+        ]
+      }
+    ]
+  ],
+  "sessions": [
+    [
+      "mesotuiy8tfmeoylah",
+      {
+        "id": "mesotuiy8tfmeoylah",
+        "userId": "user_1756221311963_gqqiuchwy",
+        "createdAt": "2025-08-26T15:15:19.114Z",
+        "lastActivity": 1756221319114,
+        "conversationId": "mesotuiyvpwq632bmh"
+      }
+    ],
+    [
+      "mesou5hqwf8t1ffa60m",
+      {
+        "id": "mesou5hqwf8t1ffa60m",
+        "userId": "testuser",
+        "createdAt": "2025-08-26T15:15:33.326Z",
+        "lastActivity": 1756221333326,
+        "conversationId": "mesou5hqdyhhry6sph"
+      }
+    ],
+    [
+      "mespu8lb6l788mkaivm",
+      {
+        "id": "mespu8lb6l788mkaivm",
+        "userId": "user_1756221311963_gqqiuchwy",
+        "createdAt": "2025-08-26T15:43:36.959Z",
+        "lastActivity": 1756223016959,
+        "conversationId": "mespu8lbo2bntqfc1ah"
+      }
+    ]
+  ],
+  "conversations": [
+    [
+      "mesotuiyvpwq632bmh",
+      {
+        "id": "mesotuiyvpwq632bmh",
+        "sessionId": "mesotuiy8tfmeoylah",
+        "userId": "user_1756221311963_gqqiuchwy",
+        "messages": [],
+        "createdAt": "2025-08-26T15:15:19.114Z",
+        "lastUpdated": 1756221319114,
+        "summary": null
+      }
+    ],
+    [
+      "mesou5hqdyhhry6sph",
+      {
+        "id": "mesou5hqdyhhry6sph",
+        "sessionId": "mesou5hqwf8t1ffa60m",
+        "userId": "testuser",
+        "messages": [],
+        "createdAt": "2025-08-26T15:15:33.326Z",
+        "lastUpdated": 1756221333326,
+        "summary": null
+      }
+    ],
+    [
+      "mespu8lbo2bntqfc1ah",
+      {
+        "id": "mespu8lbo2bntqfc1ah",
+        "sessionId": "mespu8lb6l788mkaivm",
+        "userId": "user_1756221311963_gqqiuchwy",
+        "messages": [],
+        "createdAt": "2025-08-26T15:43:36.959Z",
+        "lastUpdated": 1756223016959,
+        "summary": null
+      }
+    ]
+  ],
+  "globalContext": [],
+  "timestamp": "2025-08-26T15:47:56.649Z"
+}

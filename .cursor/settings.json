@@ -1,0 +1,10 @@
+{
+  "openai.apiBase": "http://localhost:8080/v1",
+  "openai.apiKey": "",
+  "openai.forceLocal": true,
+  "zombiecoder.endpoint": "http://localhost:8080/v1",
+  "zombiecoder.apiKey": "",
+  "zombiecoder.provider": "local",
+  "zombiecoder.model": "local-llama",
+  "zombiecoder.forceLocal": true
+}

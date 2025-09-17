@@ -1,0 +1,22 @@
+[0;1;31m×[0m stunnel4.service - LSB: Start or stop stunnel 4.x (TLS tunnel for network daemons)
+     Loaded: loaded (]8;;file://sahon-All-Series/etc/init.d/stunnel4/etc/init.d/stunnel4]8;;; generated[0;1;32m[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Sun 2025-09-07 13:21:14 +06; 6s ago
+   Duration: 4min 23.545s
+       Docs: ]8;;man:systemd-sysv-generator(8)man:systemd-sysv-generator(8)]8;;
+    Process: 10486 ExecStart=/etc/init.d/stunnel4 start [0;1;31m(code=exited, status=1/FAILURE)[0m
+      Tasks: 3 (limit: 18672)
+     Memory: 6.4M (peak: 8.8M)
+        CPU: 40ms
+     CGroup: /system.slice/stunnel4.service
+             └─[0;38;5;245m8353 /usr/bin/stunnel4 /etc/stunnel/cursor.conf[0m
+
+Sep 07 13:21:14 sahon-All-Series stunnel4[10500]: [ ] Cleaning up context [stunnel]
+Sep 07 13:21:14 sahon-All-Series stunnel4[10500]: [ ] Deallocating section [cursor-https]
+Sep 07 13:21:14 sahon-All-Series stunnel4[10500]: [ ] Cleaning up context [cursor-https]
+Sep 07 13:21:14 sahon-All-Series stunnel4[10500]: [ ] Initializing inetd mode configuration
+Sep 07 13:21:14 sahon-All-Series stunnel4[10486]: failed (no pid=pidfile specified!)
+Sep 07 13:21:14 sahon-All-Series stunnel4[10486]: You should check that you have specified the pid= in you configuration file
+Sep 07 13:21:14 sahon-All-Series systemd[1]: [0;1;39m[0;1;31m[0;1;39mstunnel4.service: Control process exited, code=exited, status=1/FAILURE[0m
+Sep 07 13:21:14 sahon-All-Series systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mstunnel4.service: Failed with result 'exit-code'.[0m
+Sep 07 13:21:14 sahon-All-Series systemd[1]: stunnel4.service: Unit process 8353 (stunnel4) remains running after unit stopped.
+Sep 07 13:21:14 sahon-All-Series systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start stunnel4.service - LSB: Start or stop stunnel 4.x (TLS tunnel for network daemons).[0m

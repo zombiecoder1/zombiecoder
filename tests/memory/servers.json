@@ -1,0 +1,352 @@
+{
+  "proxy": {
+    "status": "unhealthy",
+    "last_check": 1757466938.8519237,
+    "datetime": "2025-09-10T07:15:38.851926",
+    "error": "HTTP 503"
+  },
+  "monitoring": {
+    "status": "healthy",
+    "last_check": 1757466938.992544,
+    "datetime": "2025-09-10T07:15:38.992546",
+    "data": {
+      "latency": {
+        "cloud_avg": 0,
+        "current": 4263.775587081909,
+        "local_avg": 0
+      },
+      "recent_requests": [
+        {
+          "latency": 4263.775587081909,
+          "message": "Hello, test local response",
+          "route": "cloud",
+          "status": "success",
+          "timestamp": 1757463728.4746938
+        }
+      ],
+      "requests": {
+        "cloud": 1,
+        "failed": 0,
+        "local": 0,
+        "total": 1
+      },
+      "servers": {
+        "agent_system": {
+          "last_check": 1757466938.8668466,
+          "status": "unhealthy"
+        },
+        "editor_integration": {
+          "last_check": 1757466938.8796418,
+          "status": "healthy"
+        },
+        "main_server": {
+          "last_check": 1757466938.8884695,
+          "status": "unhealthy"
+        },
+        "multi_project": {
+          "last_check": 1757466938.8831325,
+          "status": "healthy"
+        },
+        "ollama": {
+          "error": "HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71d25053d2b0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+          "last_check": 1757466938.890455,
+          "status": "down"
+        },
+        "proxy": {
+          "last_check": 1757466938.8609335,
+          "status": "unhealthy"
+        },
+        "truth_checker": {
+          "last_check": 1757466938.8737118,
+          "status": "healthy"
+        }
+      },
+      "status": "healthy",
+      "system": {
+        "cpu_usage": 90.0,
+        "disk_usage": 45.8,
+        "memory_usage": 37.0
+      },
+      "timestamp": 1757466938.9912364,
+      "uptime": "0:53:40"
+    }
+  },
+  "agent_system": {
+    "status": "healthy",
+    "last_check": 1757466938.9967778,
+    "datetime": "2025-09-10T07:15:38.996779",
+    "data": {
+      "agents": {
+        "বাঘ": {
+          "capabilities": [
+            "সিকিউরিটি অডিট এবং পেনিট্রেশন টেস্টিং",
+            "সিস্টেম পারফরম্যান্স অপটিমাইজেশন",
+            "নেটওয়ার্ক সিকিউরিটি",
+            "ম্যালওয়্যার অ্যানালাইসিস",
+            "ইনসিডেন্ট রেসপন্স",
+            "সিকিউরিটি আর্কিটেকচার",
+            "ক্রিপ্টোগ্রাফি",
+            "সিস্টেম হার্ডেনিং",
+            "থ্রেট হান্টিং",
+            "সিকিউরিটি কমপ্লায়েন্স"
+          ],
+          "color": "orange",
+          "emoji": "🐯",
+          "is_loaded": false,
+          "load_time": null,
+          "name": "বাঘ"
+        },
+        "ভাবি": {
+          "capabilities": [
+            "ডাটাবেস ডিজাইন এবং অপটিমাইজেশন",
+            "API ডেভেলপমেন্ট",
+            "ডাটা মডেলিং",
+            "ব্যাকএন্ড সিকিউরিটি",
+            "ডাটা ইন্টিগ্রিটি",
+            "স্কেলেবল আর্কিটেকচার",
+            "মাইক্রোসার্ভিস",
+            "ডাটা ব্যাকআপ এবং রিকভারি",
+            "ডাটা অ্যানালিটিক্স",
+            "সিস্টেম ইন্টিগ্রেশন"
+          ],
+          "color": "green",
+          "emoji": "👩‍💼",
+          "is_loaded": false,
+          "load_time": null,
+          "name": "ভাবি"
+        },
+        "মুসকান": {
+          "capabilities": [
+            "ফ্রন্টএন্ড ডেভেলপমেন্ট",
+            "UI/UX ডিজাইন",
+            "ক্রিয়েটিভ কোডিং",
+            "অ্যানিমেশন এবং ইন্টারেকশন",
+            "রেসপনসিভ ডিজাইন",
+            "ফ্রন্টএন্ড অপটিমাইজেশন",
+            "মডার্ন ফ্রেমওয়ার্ক",
+            "ক্রস-ব্রাউজার কম্প্যাটিবিলিটি",
+            "অ্যাক্সেসিবিলিটি",
+            "ইউজার এক্সপেরিয়েন্স"
+          ],
+          "color": "pink",
+          "emoji": "👧",
+          "is_loaded": false,
+          "load_time": null,
+          "name": "মুসকান"
+        },
+        "সাহন ভাই": {
+          "capabilities": [
+            "কোড রিভিউ এবং অপটিমাইজেশন",
+            "সিস্টেম আর্কিটেকচার ডিজাইন",
+            "ডিবাগিং এবং ট্রাবলশুটিং",
+            "পারফরম্যান্স অপটিমাইজেশন",
+            "সিকিউরিটি অডিট",
+            "কোডিং বেস্ট প্র্যাকটিস",
+            "প্রজেক্ট ম্যানেজমেন্ট",
+            "টেকনিক্যাল কনসালটেশন",
+            "মেন্টরশিপ এবং গাইডেন্স",
+            "প্রবলেম সলভিং"
+          ],
+          "color": "blue",
+          "emoji": "👨‍💻",
+          "is_loaded": false,
+          "load_time": null,
+          "name": "সাহন ভাই"
+        },
+        "হান্টার": {
+          "capabilities": [
+            "বাগ হান্টিং এবং ডিবাগিং",
+            "কোড কোয়ালিটি অ্যাসুরেন্স",
+            "অটোমেটেড টেস্টিং",
+            "কোড রিভিউ এবং অ্যানালাইসিস",
+            "পারফরম্যান্স প্রোফাইলিং",
+            "মেমরি লিক ডিটেকশন",
+            "কোড কমপ্লেক্সিটি অ্যানালাইসিস",
+            "টেস্ট কভারেজ অ্যানালাইসিস",
+            "কোড স্ট্যাটিক অ্যানালাইসিস",
+            "কোয়ালিটি মেট্রিক্স"
+          ],
+          "color": "red",
+          "emoji": "🔍",
+          "is_loaded": false,
+          "load_time": null,
+          "name": "হান্টার"
+        }
+      },
+      "default_model": "llama3.2:1b",
+      "memory_stats": {
+        "cache_size": 0,
+        "cpu_percent": 0.0,
+        "history_size": 0,
+        "memory_mb": 34.62109375
+      },
+      "ollama_url": "http://localhost:11434",
+      "system": "ZombieCoder Advanced Agent System",
+      "system_status": {
+        "active_agents": [],
+        "auto_response_enabled": true,
+        "available_models": [
+          "llama2:7b",
+          "deepseek-coder:1.3b"
+        ],
+        "last_health_check": "Wed, 10 Sep 2025 07:11:25 GMT",
+        "ollama_connected": true,
+        "performance_stats": {
+          "cache_size": 0,
+          "cpu_percent": 0.0,
+          "history_size": 0,
+          "memory_mb": 34.62109375
+        }
+      },
+      "timestamp": "2025-09-10T07:15:38.994997"
+    }
+  },
+  "truth_checker": {
+    "status": "healthy",
+    "last_check": 1757466939.005329,
+    "datetime": "2025-09-10T07:15:39.005331",
+    "data": {
+      "active_ports": 3,
+      "service": "truth_checker",
+      "status": "running",
+      "timestamp": "2025-09-10T07:15:39.000909",
+      "total_ports": 5
+    }
+  },
+  "editor_integration": {
+    "status": "healthy",
+    "last_check": 1757466939.1548414,
+    "datetime": "2025-09-10T07:15:39.154843",
+    "data": {
+      "cloud_ai_blocked": false,
+      "local_ai_available": true,
+      "services": {
+        "ollama": {
+          "error": "HTTPConnectionPool(host='127.0.0.1', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7da0fda82090>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+          "status": "error",
+          "url": "http://127.0.0.1:11434"
+        },
+        "openai_shim": {
+          "response": {
+            "service": "multi_project_manager",
+            "status": "healthy",
+            "timestamp": 1757466939.0121737
+          },
+          "status": "active",
+          "url": "http://127.0.0.1:8001"
+        },
+        "zombiecoder": {
+          "response": {
+            "capabilities": [
+              "editor",
+              "bug_hunter",
+              "coding",
+              "debugging",
+              "frontend",
+              "architecture",
+              "database",
+              "api",
+              "security",
+              "performance",
+              "devops",
+              "testing",
+              "voice",
+              "real_time"
+            ],
+            "family_members": [
+              "সাহন ভাই",
+              "মুসকান",
+              "ভাবি",
+              "পরিবার"
+            ],
+            "language": "bengali_english_mixed",
+            "last_update": 1757466939.0893376,
+            "name": "ZombieCoder Agent (সাহন ভাই)",
+            "ollama_url": "http://localhost:11434",
+            "personalities": [
+              "elder_brother",
+              "friend",
+              "teacher",
+              "doctor",
+              "engineer",
+              "guard",
+              "coach",
+              "professional"
+            ],
+            "resource_status": false,
+            "status": "active",
+            "total_capabilities": 14
+          },
+          "status": "active",
+          "url": "http://127.0.0.1:12345"
+        }
+      },
+      "status": "running",
+      "timestamp": "2025-09-10T07:15:39.151958"
+    }
+  },
+  "multi_project": {
+    "status": "healthy",
+    "last_check": 1757466939.1626973,
+    "datetime": "2025-09-10T07:15:39.162699",
+    "data": {
+      "active_project": null,
+      "agent_mappings": 0,
+      "projects": 0,
+      "status": "running",
+      "timestamp": 1757466939.15835
+    }
+  },
+  "main_server": {
+    "status": "healthy",
+    "last_check": 1757466939.2500217,
+    "datetime": "2025-09-10T07:15:39.250025",
+    "data": {
+      "capabilities": [
+        "editor",
+        "bug_hunter",
+        "coding",
+        "debugging",
+        "frontend",
+        "architecture",
+        "database",
+        "api",
+        "security",
+        "performance",
+        "devops",
+        "testing",
+        "voice",
+        "real_time"
+      ],
+      "family_members": [
+        "সাহন ভাই",
+        "মুসকান",
+        "ভাবি",
+        "পরিবার"
+      ],
+      "language": "bengali_english_mixed",
+      "last_update": 1757466939.2321787,
+      "name": "ZombieCoder Agent (সাহন ভাই)",
+      "ollama_url": "http://localhost:11434",
+      "personalities": [
+        "elder_brother",
+        "friend",
+        "teacher",
+        "doctor",
+        "engineer",
+        "guard",
+        "coach",
+        "professional"
+      ],
+      "resource_status": false,
+      "status": "active",
+      "total_capabilities": 14
+    }
+  },
+  "ollama": {
+    "status": "down",
+    "last_check": 1757466939.2602172,
+    "datetime": "2025-09-10T07:15:39.260219",
+    "error": "Connection refused"
+  }
+}

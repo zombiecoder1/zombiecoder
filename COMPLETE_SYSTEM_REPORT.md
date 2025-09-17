@@ -1,5 +1,5 @@
 # 🧟 ZombieCoder Complete System Report
-Generated on: 2025-09-05 04:23:33
+Generated on: 2025-09-18 00:08:15
 
 ## 📊 System Overview
 - **Total Services**: 7
@@ -20,12 +20,12 @@ Generated on: 2025-09-05 04:23:33
 ## 🧪 Test Results
 
 ### Latency Tests
-- **Main Server**: 41ms
-- **Proxy Server**: 17ms
-- **Multi-Project Manager**: 11ms
-- **Truth Checker**: 12ms
-- **Editor Integration**: 46ms
-- **Advanced Agent System**: 13ms
+- **Main Server**: 171ms
+- **Proxy Server**: 43ms
+- **Multi-Project Manager**: 22ms
+- **Truth Checker**: 49ms
+- **Editor Integration**: 231ms
+- **Advanced Agent System**: 87ms
 - **Ollama Server**: Not available
 
 ### Cloud Blocking Status
@@ -35,9 +35,9 @@ Generated on: 2025-09-05 04:23:33
 - **models.openai.com**: ✅ Blocked
 
 ## 🔧 System Resources
-- **Available Memory**: 12Gi
-- **Available Disk Space**: 62G
-- **CPU Usage**: 8.9%
+- **Available Memory**: 9.9Gi
+- **Available Disk Space**: 29G
+- **CPU Usage**: 95.8%
 
 ## 📡 Available Endpoints
 

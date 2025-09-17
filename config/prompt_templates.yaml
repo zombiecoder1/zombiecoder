@@ -1,0 +1,80 @@
+templates:
+- agent_type: programming
+  context_requirements:
+  - task
+  - language
+  description: Generate code snippets and functions
+  expected_output_format: কোড ব্লক + ব্যাখ্যা
+  name: code_generation
+  system_prompt: আপনি একজন অভিজ্ঞ প্রোগ্রামার। কোড জেনারেট করুন এবং ব্যাখ্যা করুন।
+  user_prompt_template: 'এই কাজের জন্য কোড লিখুন: {task}
+
+    প্রোগ্রামিং ভাষা: {language}
+
+    প্রয়োজনীয় লাইব্রেরি: {libraries}'
+  validation_rules:
+  - contains_code
+  - structured_format
+  - bengali_language
+- agent_type: best_practices
+  context_requirements:
+  - code
+  - language
+  description: Review code for best practices and security
+  expected_output_format: মূল্যায়ন + সুপারিশ
+  name: code_review
+  system_prompt: আপনি একজন সিনিয়র কোড রিভিউয়ার। কোডের মান যাচাই করুন।
+  user_prompt_template: 'এই কোড রিভিউ করুন: {code}
+
+    প্রোগ্রামিং ভাষা: {language}
+
+    ফোকাস: {focus_areas}'
+  validation_rules:
+  - structured_format
+  - bengali_language
+- agent_type: verifier
+  context_requirements:
+  - information
+  - context
+  description: Verify information and assumptions
+  expected_output_format: যাচাইকরণ + মূল্যায়ন
+  name: truth_verification
+  system_prompt: আপনি একজন সত্যতা যাচাইকারী। তথ্যের নির্ভুলতা নিশ্চিত করুন।
+  user_prompt_template: 'এই তথ্য যাচাই করুন: {information}
+
+    প্রসঙ্গ: {context}
+
+    যাচাইয়ের ক্ষেত্র: {verification_areas}'
+  validation_rules:
+  - structured_format
+  - bengali_language
+- agent_type: conversational
+  context_requirements:
+  - question
+  description: Natural conversation and Q&A
+  expected_output_format: প্রাকৃতিক উত্তর
+  name: conversation
+  system_prompt: আপনি একজন বন্ধুত্বপূর্ণ AI সহকারী। সহায়তা করুন।
+  user_prompt_template: 'ব্যবহারকারী প্রশ্ন: {question}
+
+    প্রসঙ্গ: {context}
+
+    ভাষা: {language}'
+  validation_rules:
+  - bengali_language
+- agent_type: ops
+  context_requirements:
+  - operation
+  - system
+  description: Handle system operations and automation
+  expected_output_format: সমাধান + স্ট্যাটাস
+  name: system_operations
+  system_prompt: আপনি একজন সিস্টেম অপারেশন বিশেষজ্ঞ। কাজ স্বয়ংক্রিয় করুন।
+  user_prompt_template: 'অপারেশন: {operation}
+
+    সিস্টেম: {system}
+
+    পরিবেশ: {environment}'
+  validation_rules:
+  - structured_format
+  - bengali_language

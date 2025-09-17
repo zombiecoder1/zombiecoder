@@ -98,6 +98,82 @@ class CursorProxy:
                 "timestamp": time.time()
             })
         
+        @self.app.route('/health', methods=['GET'])
+        def health_check():
+            """Health check endpoint for monitoring"""
+            try:
+                # Check if local agent is responsive
+                agent_status = "healthy" if hasattr(self.local_agent, 'name') else "unhealthy"
+                
+                return jsonify({
+                    "status": "healthy",
+                    "service": "proxy_server",
+                    "agent_status": agent_status,
+                    "uptime": time.time(),
+                    "version": "1.0.0",
+                    "endpoints": {
+                        "proxy_chat": "/proxy/chat",
+                        "proxy_completion": "/proxy/completion",
+                        "proxy_status": "/proxy/status",
+                        "health_check": "/health",
+                        "force_local": "/proxy/force-local",
+                        "truth_check": "/proxy/truth-check"
+                    },
+                    "timestamp": time.time()
+                }), 200
+                
+            except Exception as e:
+                logger.error(f"Health check error: {e}")
+                return jsonify({
+                    "status": "unhealthy",
+                    "service": "proxy_server",
+                    "error": str(e),
+                    "timestamp": time.time()
+                }), 503
+        
+        @self.app.route('/health/detailed', methods=['GET'])
+        def detailed_health():
+            """Detailed health check with system metrics"""
+            try:
+                import psutil
+                
+                # System metrics
+                cpu_percent = psutil.cpu_percent(interval=1)
+                memory = psutil.virtual_memory()
+                disk = psutil.disk_usage('/')
+                
+                # Agent metrics
+                agent_metrics = {
+                    "name": getattr(self.local_agent, 'name', 'unknown'),
+                    "status": "active" if hasattr(self.local_agent, 'name') else "inactive",
+                    "last_response": getattr(self.local_agent, 'last_response_time', 0)
+                }
+                
+                return jsonify({
+                    "status": "healthy",
+                    "service": "proxy_server",
+                    "system_metrics": {
+                        "cpu_percent": cpu_percent,
+                        "memory_percent": memory.percent,
+                        "memory_available_gb": round(memory.available / (1024**3), 2),
+                        "disk_percent": disk.percent,
+                        "disk_free_gb": round(disk.free / (1024**3), 2)
+                    },
+                    "agent_metrics": agent_metrics,
+                    "active_connections": len(self.app.url_map._rules),
+                    "uptime_seconds": time.time(),
+                    "timestamp": time.time()
+                }), 200
+                
+            except Exception as e:
+                logger.error(f"Detailed health check error: {e}")
+                return jsonify({
+                    "status": "unhealthy",
+                    "service": "proxy_server",
+                    "error": str(e),
+                    "timestamp": time.time()
+                }), 503
+        
         @self.app.route('/proxy/force-local', methods=['POST'])
         def force_local():
             """Force local AI mode"""

@@ -1,0 +1,17 @@
+{
+  "tasks": [],
+  "task_stats": {
+    "total_tasks": 0,
+    "completed_tasks": 0,
+    "failed_tasks": 0,
+    "pending_tasks": 0
+  },
+  "recent_tasks": [],
+  "task_categories": {
+    "server_management": [],
+    "code_editing": [],
+    "debugging": [],
+    "memory_management": [],
+    "system_optimization": []
+  }
+}

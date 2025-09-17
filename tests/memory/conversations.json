@@ -1,0 +1,22 @@
+{
+  "messages": [
+    {
+      "actor": "user",
+      "text": "Hello, is the local AI working?",
+      "timestamp": 1757464372.329932,
+      "datetime": "2025-09-10T06:32:52.329938"
+    },
+    {
+      "actor": "assistant",
+      "text": "Yes, the local AI is working perfectly! All requests are being processed by local Ollama models.",
+      "timestamp": 1757464375.3674524,
+      "datetime": "2025-09-10T06:32:55.367467"
+    },
+    {
+      "actor": "assistant",
+      "text": "Yes, the local AI is working perfectly! All requests are being processed by local Ollama models (llama2:7b and deepseek-coder:1.3b). The system is running smoothly with low latency.",
+      "timestamp": 1757464870.5358446,
+      "datetime": "2025-09-10T06:41:10.535851"
+    }
+  ]
+}

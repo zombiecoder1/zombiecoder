@@ -1,0 +1,15 @@
+cleanup:
+  auto_cleanup_enabled: true
+  backup_before_cleanup: true
+  cleanup_interval_days: 30
+created_at: '2025-09-18T00:48:09.676963'
+limits:
+  max_conversation_history: 50
+  max_interactions_per_agent: 100
+  max_memory_file_size_mb: 5
+storage:
+  compression: false
+  directory: memory
+  encryption: false
+  type: yaml
+version: 1.0.0

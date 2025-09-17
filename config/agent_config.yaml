@@ -1,0 +1,46 @@
+agents:
+  architect_agent:
+    enabled: true
+    port: 8005
+    priority: 3
+    specialties:
+    - architecture
+    - design
+  conversational_agent:
+    enabled: true
+    port: 8006
+    priority: 5
+    specialties:
+    - conversation
+    - support
+  friendly_programmer:
+    enabled: true
+    port: 8004
+    priority: 1
+    specialties:
+    - programming
+    - teaching
+    - mentoring
+  operations_agent:
+    enabled: true
+    port: 8007
+    priority: 6
+    specialties:
+    - operations
+    - automation
+  programming_agent:
+    enabled: true
+    port: 12345
+    priority: 2
+    specialties:
+    - code_generation
+    - debugging
+  verifier_agent:
+    enabled: true
+    port: 8002
+    priority: 4
+    specialties:
+    - verification
+    - validation
+created_at: '2025-09-18T00:48:09.676933'
+version: 1.0.0

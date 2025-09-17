@@ -1,0 +1,24 @@
+created_at: '2025-09-18T00:48:09.676951'
+logging:
+  backup_count: 5
+  file_rotation: true
+  level: INFO
+  max_file_size_mb: 10
+monitoring:
+  alerting_enabled: false
+  health_check_interval: 30
+  metrics_collection: true
+performance:
+  cpu_limit_percent: 80
+  max_concurrent_requests: 10
+  memory_limit_mb: 512
+  request_timeout: 30
+security:
+  authentication:
+    api_key_required: false
+    enabled: false
+  rate_limiting:
+    burst_limit: 20
+    enabled: true
+    requests_per_minute: 100
+version: 1.0.0

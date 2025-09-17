@@ -1,0 +1,28 @@
+created_at: '2025-09-18T00:48:10.712943'
+monitoring:
+  alert_threshold: 3
+  check_interval: 30
+  retry_attempts: 3
+  timeout: 10
+services:
+  editor_chat:
+    name: Editor Chat Server
+    port: 8003
+    url: http://localhost:8003/health
+  friendly_programmer:
+    name: Friendly Programmer Agent
+    port: 8004
+    url: http://localhost:8004/health
+  multi_project:
+    name: Multi Project Manager
+    port: 8001
+    url: http://localhost:8001/health
+  proxy_server:
+    name: Proxy Server
+    port: 8080
+    url: http://localhost:8080/health
+  unified_agent:
+    name: Unified Agent System
+    port: 12345
+    url: http://localhost:12345/status
+version: 1.0.0

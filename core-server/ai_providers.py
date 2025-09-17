@@ -408,6 +408,105 @@ class AIProviders:
                 "timestamp": datetime.now().isoformat()
             }
     
+    def get_real_time_info(self, query: str = "general") -> Dict[str, Any]:
+        """Get real-time information for various queries"""
+        try:
+            real_time_services = {
+                'weather': {
+                    'api': 'http://api.openweathermap.org/data/2.5/weather',
+                    'enabled': False  # Requires API key
+                },
+                'news': {
+                    'api': 'https://newsapi.org/v2/top-headlines',
+                    'enabled': False  # Requires API key
+                },
+                'time': {
+                    'api': 'system',
+                    'enabled': True
+                },
+                'system_status': {
+                    'api': 'system',
+                    'enabled': True
+                }
+            }
+            
+            if query == 'weather':
+                return self._get_weather_info()
+            elif query == 'news':
+                return self._get_news_info()
+            elif query == 'time':
+                return self._get_time_info()
+            elif query == 'system_status':
+                return self._get_system_status()
+            else:
+                return {
+                    'query': query,
+                    'response': f"Real-time information for '{query}' is not available",
+                    'timestamp': datetime.now().isoformat(),
+                    'available_services': list(real_time_services.keys())
+                }
+                
+        except Exception as e:
+            logger.error(f"Real-time info error: {e}")
+            return {
+                'query': query,
+                'response': "Sorry, I couldn't fetch real-time information",
+                'error': str(e),
+                'timestamp': datetime.now().isoformat()
+            }
+    
+    def _get_weather_info(self) -> Dict[str, Any]:
+        """Get weather information (placeholder)"""
+        return {
+            'query': 'weather',
+            'response': "Weather information is not configured. Please check your API keys.",
+            'timestamp': datetime.now().isoformat(),
+            'status': 'not_configured'
+        }
+    
+    def _get_news_info(self) -> Dict[str, Any]:
+        """Get news information (placeholder)"""
+        return {
+            'query': 'news',
+            'response': "News information is not configured. Please check your API keys.",
+            'timestamp': datetime.now().isoformat(),
+            'status': 'not_configured'
+        }
+    
+    def _get_time_info(self) -> Dict[str, Any]:
+        """Get current time information"""
+        now = datetime.now()
+        return {
+            'query': 'time',
+            'response': f"Current time: {now.strftime('%Y-%m-%d %H:%M:%S')} (Bangladesh Standard Time)",
+            'timestamp': now.isoformat(),
+            'timezone': 'Asia/Dhaka',
+            'status': 'available'
+        }
+    
+    def _get_system_status(self) -> Dict[str, Any]:
+        """Get system status information"""
+        try:
+            import psutil
+            
+            return {
+                'query': 'system_status',
+                'response': f"System is running. CPU: {psutil.cpu_percent()}%, Memory: {psutil.virtual_memory().percent}%",
+                'timestamp': datetime.now().isoformat(),
+                'cpu_percent': psutil.cpu_percent(),
+                'memory_percent': psutil.virtual_memory().percent,
+                'disk_percent': psutil.disk_usage('/').percent,
+                'status': 'available'
+            }
+        except Exception as e:
+            return {
+                'query': 'system_status',
+                'response': "System status information is not available",
+                'error': str(e),
+                'timestamp': datetime.now().isoformat(),
+                'status': 'error'
+            }
+
     def get_status(self) -> Dict[str, Any]:
         """Get provider status"""
         return {

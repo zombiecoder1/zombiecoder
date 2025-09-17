@@ -1,0 +1,7 @@
+{
+  "total_requests": 1,
+  "local_responses": 0,
+  "cloud_responses": 1,
+  "avg_latency": 4263.775587081909,
+  "current_route": "cloud"
+}

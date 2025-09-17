@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface Demo - Subprocess Approach</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .chat-container {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #f9f9f9;
+        }
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        .user-message {
+            background: #007bff;
+            color: white;
+            margin-left: auto;
+        }
+        .assistant-message {
+            background: #e9ecef;
+            color: #333;
+        }
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .status {
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .typing {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Chat Interface Demo</h1>
+        <h3 style="text-align: center; color: #666;">Subprocess Approach - Direct Ollama Integration</h3>
+        
+        <div id="status" class="status info">Ready to chat! Type your message below.</div>
+        
+        <div class="chat-container" id="chatContainer">
+            <div class="message assistant-message">
+                Hello! I'm your AI assistant. I can help you with programming, answer questions, and chat in both English and Bengali. What would you like to know?
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()" id="sendButton">Send</button>
+        </div>
+        
+        <div style="margin-top: 20px; text-align: center;">
+            <button onclick="testBengali()" style="background: #28a745;">Test Bengali</button>
+            <button onclick="testPython()" style="background: #ffc107; color: #333;">Test Python</button>
+            <button onclick="clearChat()" style="background: #dc3545;">Clear Chat</button>
+        </div>
+    </div>
+
+    <script>
+        const AI_SERVER_URL = 'http://localhost:3001';
+        let isProcessing = false;
+
+        function updateStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+        }
+
+        function addMessage(content, isUser = false) {
+            const chatContainer = document.getElementById('chatContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'assistant-message'}`;
+            messageDiv.textContent = content;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function addTypingIndicator() {
+            const chatContainer = document.getElementById('chatContainer');
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message assistant-message typing';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.textContent = 'AI is thinking...';
+            chatContainer.appendChild(typingDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+
+        async function sendMessage() {
+            if (isProcessing) return;
+            
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            
+            if (!message) return;
+            
+            isProcessing = true;
+            document.getElementById('sendButton').disabled = true;
+            messageInput.disabled = true;
+            
+            // Add user message
+            addMessage(message, true);
+            messageInput.value = '';
+            
+            // Add typing indicator
+            addTypingIndicator();
+            updateStatus('Sending message to AI server...', 'info');
+            
+            try {
+                const response = await fetch(`${AI_SERVER_URL}/api/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: message
+                    })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    removeTypingIndicator();
+                    addMessage(data.response);
+                    updateStatus('Message sent successfully!', 'success');
+                } else {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+            } catch (error) {
+                removeTypingIndicator();
+                addMessage('Sorry, I encountered an error. Please try again.');
+                updateStatus(`Error: ${error.message}`, 'error');
+            } finally {
+                isProcessing = false;
+                document.getElementById('sendButton').disabled = false;
+                messageInput.disabled = false;
+                messageInput.focus();
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function testBengali() {
+            const messageInput = document.getElementById('messageInput');
+            messageInput.value = 'আমাকে একটি সিম্পল Python ফাংশন লিখে দাও';
+            sendMessage();
+        }
+
+        function testPython() {
+            const messageInput = document.getElementById('messageInput');
+            messageInput.value = 'Write a Python function to calculate factorial';
+            sendMessage();
+        }
+
+        function clearChat() {
+            const chatContainer = document.getElementById('chatContainer');
+            chatContainer.innerHTML = `
+                <div class="message assistant-message">
+                    Hello! I'm your AI assistant. I can help you with programming, answer questions, and chat in both English and Bengali. What would you like to know?
+                </div>
+            `;
+            updateStatus('Chat cleared!', 'info');
+        }
+
+        // Test server connection on load
+        window.onload = async function() {
+            try {
+                const response = await fetch(`${AI_SERVER_URL}/health`);
+                if (response.ok) {
+                    const data = await response.json();
+                    updateStatus(`Connected to AI Server (${data.model})`, 'success');
+                } else {
+                    updateStatus('AI Server not responding', 'error');
+                }
+            } catch (error) {
+                updateStatus('Cannot connect to AI Server', 'error');
+            }
+        };
+    </script>
+</body>
+</html>

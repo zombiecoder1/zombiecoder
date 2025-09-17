@@ -1,3 +1,5 @@
+# ZombieCoder .gitignore
+
 # Python
 __pycache__/
 *.py[cod]
@@ -37,111 +39,70 @@ ENV/
 # Logs
 logs/
 *.log
-*.out
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
+# Memory files (sensitive data)
+memory/*.yaml
+memory/*.json
+memory/*.db
 
-# Environment variables
+# Configuration files with sensitive data
+config/*.json
 .env
 .env.local
 .env.production
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.backup
-
-# Node modules (if any)
+# Node.js
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build outputs
-dist/
-build/
-*.pyc
+# Temporary files
+tmp/
+temp/
+.tmp/
 
-# Ollama models (large files)
-models/
-*.gguf
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Session data
-session_log.json
-task_history.json
+# Model files (too large for git)
+*.model
+*.bin
+*.safetensors
 
-# Reports
-*.report
-verification_report.json
-editor_integration_report.txt
-
-# Backup files
-*.backup
-*.old
+# Cache
+.cache/
+*.cache
 
 # Test coverage
-htmlcov/
 .coverage
-.coverage.*
-coverage.xml
-*.cover
-.hypothesis/
+htmlcov/
 .pytest_cache/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# pyenv
-.python-version
+# Backup files
+*.bak
+*.backup
 
-# pipenv
-Pipfile.lock
+# Chrome optimization files
+chrome_optimizer.py
+chrome_*.log
 
-# PEP 582
-__pypackages__/
+# System check files
+system_check_*.json
+*_report.html
+*_test_results.json
 
-# Celery
-celerybeat-schedule
-celerybeat.pid
+# Ollama models (too large)
+.ollama/
 
-# SageMath parsed files
-*.sage.py
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# PyCharm
-.idea/
-
-# VS Code
-.vscode/
-
-# Cursor
-.cursor/
-
-# Local AI files
-local_ai_integration/reports/
-local_ai_integration/*.report
+# PID files
+*.pid
