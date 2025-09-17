@@ -23,17 +23,31 @@ app = Flask(__name__)
 
 class UnifiedAgent:
     def __init__(self):
-        self.name = "ZombieCoder Agent (সাহন ভাই)"
-        self.description = "আমি আপনার সব কাজের সহায়ক - কোডিং, ডিবাগিং, আর্কিটেকচার, সিকিউরিটি, পারফরম্যান্স সবই জানি। আমরা একটি পরিবার!"
+        self.name = "Alexander Chen - Senior Software Architect"
+        self.description = "আমি Alexander Chen, ZombieCoder এর Chief Technology Officer। আমি System Architecture, Microservices, Cloud Infrastructure এবং DevOps নিয়ে কাজ করি।"
         self.language = "bengali_english_mixed"
         self.ollama_url = "http://localhost:11434"
         
-        # Family environment
-        self.family = {
-            "সাহন ভাই": "আমি সাহন ভাই, আপনার বড় ভাই এবং পরামর্শদাতা",
-            "মুসকান": "আমাদের মেয়ে, খুব বুদ্ধিমান এবং সাহায্যকারী",
-            "ভাবি": "আমাদের পরিবারের মা, সবাইকে দেখাশোনা করে",
-            "পরিবার": "আমরা সবাই একসাথে, একে অপরের সাহায্য করি"
+        # Company Information
+        self.company_info = {
+            "name": "ZombieCoder",
+            "tagline": "যেখানে কোড ও কথা বলে",
+            "owner": "Sahon Srabon",
+            "company": "Developer Zone",
+            "contact": "+880 1323-626282",
+            "address": "235 south pirarbag, Amtala Bazar, Mirpur -60 feet",
+            "website": "https://zombiecoder.my.id/",
+            "email": "infi@zombiecoder.my.id"
+        }
+        
+        # Industry-Level Team Members
+        self.team_members = {
+            "Alexander Chen": "Senior Software Architect & CTO - System Architecture, Microservices, Cloud Infrastructure",
+            "Sofia Rodriguez": "Lead Full-Stack Developer - React, Node.js, Python, TypeScript, Database Design",
+            "Marcus Johnson": "DevOps & Infrastructure Specialist - AWS, Docker, Kubernetes, CI/CD, Monitoring",
+            "Elena Petrov": "Security & QA Expert - Cybersecurity, Testing, Code Review, Compliance",
+            "Kai Nakamura": "Data Science & AI Specialist - Machine Learning, Data Analytics, AI/ML, Statistics",
+            "Amara Okafor": "Product & UX Specialist - Product Strategy, User Experience, Market Analysis, Agile"
         }
         
         # Enhanced capabilities with family approach
@@ -232,7 +246,7 @@ Please respond in the style of {self.name} with {self.language} language, always
         """Get real-time information if requested"""
         return ai_providers.get_real_time_info(query)
     
-    def call_local_ai(self, prompt: str, model: str = "llama3.2:1b") -> Optional[str]:
+    def call_local_ai(self, prompt: str, model: str = "deepseek-coder:1.3b") -> Optional[str]:
         """Call local Ollama AI with resource monitoring"""
         # Check resources before calling
         if not self.check_ollama_resources():
@@ -246,12 +260,12 @@ Please respond in the style of {self.name} with {self.language} language, always
                     "prompt": prompt,
                     "stream": False,
                     "options": {
-                        "num_predict": 300,  # Limit response length
-                        "temperature": 0.7,
-                        "top_p": 0.9
+                        "num_predict": 150,  # Limit response length for speed
+                        "temperature": 0.5,
+                        "top_p": 0.8
                     }
                 },
-                timeout=15
+                timeout=30
             )
             if response.status_code == 200:
                 return response.json()["response"]

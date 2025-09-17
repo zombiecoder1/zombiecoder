@@ -474,6 +474,30 @@ def get_suggestions():
     suggestions = multi_project_manager.get_project_suggestions(query)
     return jsonify({"suggestions": suggestions})
 
+@app.route('/chat', methods=['POST'])
+def chat():
+    """Chat endpoint for multi-project manager"""
+    try:
+        data = request.get_json()
+        message = data.get('message', '')
+        context = data.get('context', {})
+        
+        if not message:
+            return jsonify({"error": "Message is required"}), 400
+        
+        # Use unified agent for chat functionality
+        result = unified_agent.process_message(message, context)
+        response = result.get("response", "Sorry, I couldn't process your request.")
+        
+        return jsonify({
+            "response": response,
+            "service": "multi_project_manager",
+            "timestamp": time.time()
+        })
+    except Exception as e:
+        logger.error(f"Chat error: {e}")
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/health')
 def health():
     """Health check endpoint"""
